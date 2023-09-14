@@ -1,0 +1,31 @@
+{
+  "name": "MV3 WebRequest Demo",
+  "version": "1.0",
+  "manifest_version": 3,
+  "permissions": [
+    "webRequest",
+    "activeTab",
+    "storage",
+    "unlimitedStorage"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://www.binance.com/zh-CN/my/dashboard"],
+      "js": ["inject.js"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "pop.html",
+    "default_icon": {
+      "16": "images/160.png",
+      "48": "images/160.png",
+      "128": "images/160.png"
+    }
+  }
+}
