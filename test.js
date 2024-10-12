@@ -12,7 +12,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 function newPage() {
-    chrome.tabs.create({url: 'https://www.binance.com/zh-CN/my/dashboard'}, function (tab) {
+    chrome.tabs.create({url: 'https://www.amazon.com/your-orders/orders?timeFilter=year-2023&ref_=ppx_yo2ov_dt_b_filter_all_y2023'}, function (tab) {
+        debugger
         var tabId = tab.id;
         alert('新标签页的tabId为：'+ tabId);
         // 监听标签页状态，确保标签页加载完成后再执行注入操作
